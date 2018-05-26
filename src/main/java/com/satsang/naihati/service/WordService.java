@@ -14,12 +14,13 @@ public class WordService {
 	@Autowired
 	private WordRepository wordRepository;
 	public List<Word> getWords(Map<String, String> queryMap) {
-		if(queryMap == null) {
+		//if(!queryMap.isEmpty()) {
 			List<Word> wordList = wordRepository.findAll();
+			//System.out.println("===============================");
 			System.out.println(wordList);
 			return wordList;
-		}else
-			return null;
+		/*}else
+			return null;*/
 	}
 
 }

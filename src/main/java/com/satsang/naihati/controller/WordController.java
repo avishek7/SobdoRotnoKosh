@@ -25,8 +25,8 @@ public class WordController {
 		return wordService.getWords(queryMap);
 	}
 	@RequestMapping(value="/words/{wordKey}", method = RequestMethod.GET)
-	public void getWord(@PathVariable ("wordkey") String wordkey) {
-		
+	public Word getWord(@PathVariable ("wordkey") String wordkey) {
+		return null;
 	}
 	@RequestMapping(value="/words", method = RequestMethod.POST)
 	public void insertWord(@RequestBody Word word) {
